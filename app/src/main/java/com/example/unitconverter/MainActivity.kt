@@ -182,8 +182,15 @@ fun Display() {
             }
         }
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = "Result: ${outputValue} ${outputUnit}",
-                style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.ExtraBold)
+            Row{
+                Text(text= "Entered Value: $inputValue $inputUnit",
+                    style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.ExtraBold)
+
+                Spacer(modifier = Modifier.width(16.dp))
+
+                Text(text = "Result: $outputValue $outputUnit",
+                    style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.ExtraBold)
+            }
         }
     }
 
